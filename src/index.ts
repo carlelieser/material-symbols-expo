@@ -1,9 +1,12 @@
-import { glyphMap, glyphMapFilled } from "./glyphMap";
+import { glyphMap } from "./glyphMap";
 import createIconSet from "@expo/vector-icons/createIconSet";
 
 const MaterialSymbolsOutlinedFont = require("./assets/fonts/material-symbols-outlined.ttf");
+const MaterialSymbolsOutlinedFilledFont = require("./assets/fonts/material-symbols-outlined-filled.ttf");
 const MaterialSymbolsRoundedFont = require("./assets/fonts/material-symbols-rounded.ttf");
+const MaterialSymbolsRoundedFilledFont = require("./assets/fonts/material-symbols-rounded-filled.ttf");
 const MaterialSymbolsSharpFont = require("./assets/fonts/material-symbols-sharp.ttf");
+const MaterialSymbolsSharpFilledFont = require("./assets/fonts/material-symbols-sharp-filled.ttf");
 
 export const MaterialSymbols = createIconSet(
 	glyphMap,
@@ -12,9 +15,9 @@ export const MaterialSymbols = createIconSet(
 );
 
 export const MaterialSymbolsFilled = createIconSet(
-	glyphMapFilled,
+	glyphMap,
 	"MaterialSymbolsOutlinedFilled",
-	MaterialSymbolsOutlinedFont,
+	MaterialSymbolsOutlinedFilledFont,
 );
 
 export const MaterialSymbolsOutlined = createIconSet(
@@ -24,9 +27,9 @@ export const MaterialSymbolsOutlined = createIconSet(
 );
 
 export const MaterialSymbolsOutlinedFilled = createIconSet(
-	glyphMapFilled,
+	glyphMap,
 	"MaterialSymbolsOutlinedFilled",
-	MaterialSymbolsOutlinedFont,
+	MaterialSymbolsOutlinedFilledFont,
 );
 
 export const MaterialSymbolsRounded = createIconSet(
@@ -36,9 +39,9 @@ export const MaterialSymbolsRounded = createIconSet(
 );
 
 export const MaterialSymbolsRoundedFilled = createIconSet(
-	glyphMapFilled,
+	glyphMap,
 	"MaterialSymbolsRoundedFilled",
-	MaterialSymbolsRoundedFont,
+	MaterialSymbolsRoundedFilledFont,
 );
 
 export const MaterialSymbolsSharp = createIconSet(
@@ -48,16 +51,16 @@ export const MaterialSymbolsSharp = createIconSet(
 );
 
 export const MaterialSymbolsSharpFilled = createIconSet(
-	glyphMapFilled,
+	glyphMap,
 	"MaterialSymbolsSharpFilled",
-	MaterialSymbolsSharpFont,
+	MaterialSymbolsSharpFilledFont,
 );
 
 export const MaterialSymbolsFonts = {
 	MaterialSymbolsOutlined: MaterialSymbolsOutlinedFont,
-	MaterialSymbolsOutlinedFilled: MaterialSymbolsOutlinedFont,
+	MaterialSymbolsOutlinedFilled: MaterialSymbolsOutlinedFilledFont,
 	MaterialSymbolsRounded: MaterialSymbolsRoundedFont,
-	MaterialSymbolsRoundedFilled: MaterialSymbolsRoundedFont,
+	MaterialSymbolsRoundedFilled: MaterialSymbolsRoundedFilledFont,
 	MaterialSymbolsSharp: MaterialSymbolsSharpFont,
-	MaterialSymbolsSharpFilled: MaterialSymbolsSharpFont,
+	MaterialSymbolsSharpFilled: MaterialSymbolsSharpFilledFont,
 };
