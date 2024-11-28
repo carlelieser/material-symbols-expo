@@ -1,21 +1,18 @@
 import fs from "fs-extra";
+import * as path from "node:path";
+import { fonts, fontsDir } from "./common";
 
 const URL_PREFIX =
 	"https://github.com/google/material-design-icons/raw/refs/heads/master/variablefont/";
 const URL_SUFFIX = "%5BFILL,GRAD,opsz,wght%5D.ttf";
-const fonts = {
-	"material-symbols-outlined": "MaterialSymbolsOutlined",
-	"material-symbols-rounded": "MaterialSymbolsRounded",
-	"material-symbols-sharp": "MaterialSymbolsSharp",
-};
 
 for (const [fileName, fontName] of Object.entries(fonts)) {
 	const url = `${URL_PREFIX}${fontName}${URL_SUFFIX}`;
-	const path = `./src/assets/fonts/${fileName}.ttf`;
+	const output = path.join(fontsDir, `${fileName}.ttf`);
 	const response = await fetch(url);
 	const arrayBuffer = await response.arrayBuffer();
 	const buffer = Buffer.from(arrayBuffer);
-	await fs.outputFile(path, buffer);
+	await fs.outputFile(output, buffer);
 }
 
 export {};
