@@ -22,8 +22,5 @@
 		"ts-node": "^10.4.0",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.2"
-	},
-	"dependencies": {
-		"material-symbols": "^0.27.1"
 	}
 }
