@@ -8,6 +8,7 @@
 		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
 		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
+		"format": "prettier \"**/*.ts\" --write",
 		"build": "tsc && npm run copy-assets"
 	},
 	"private": false,
@@ -19,6 +20,7 @@
 		"@types/fs-extra": "^11.0.4",
 		"fs-extra": "^11.2.0",
 		"node-fetch": "^3.3.2",
+		"prettier": "^3.4.1",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.2"
 	}

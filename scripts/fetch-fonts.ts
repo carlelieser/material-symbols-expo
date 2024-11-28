@@ -1,12 +1,13 @@
-import fs from "fs-extra"
+import fs from "fs-extra";
 
-const URL_PREFIX = "https://github.com/google/material-design-icons/raw/refs/heads/master/variablefont/";
+const URL_PREFIX =
+	"https://github.com/google/material-design-icons/raw/refs/heads/master/variablefont/";
 const URL_SUFFIX = "%5BFILL,GRAD,opsz,wght%5D.ttf";
 const fonts = {
 	"material-symbols-outlined": "MaterialSymbolsOutlined",
 	"material-symbols-rounded": "MaterialSymbolsRounded",
 	"material-symbols-sharp": "MaterialSymbolsSharp",
-}
+};
 
 for (const [fileName, fontName] of Object.entries(fonts)) {
 	const url = `${URL_PREFIX}${fontName}${URL_SUFFIX}`;
