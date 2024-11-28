@@ -10,7 +10,7 @@
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
 		"build": "tsc && npm run copy-assets"
 	},
-	"private": true,
+	"private": false,
 	"peerDependencies": {
 		"@expo/vector-icons": "^14.0.4"
 	},
