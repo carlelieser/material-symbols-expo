@@ -1,0 +1,29 @@
+{
+	"name": "material-symbols-expo",
+	"type": "module",
+	"version": "1.0.0",
+	"description": "Material Symbols icon set for Expo.",
+	"main": "dist/index.js",
+	"scripts": {
+		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
+		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
+		"copy-assets": "tsx ./scripts/copy-assets.ts",
+		"build": "tsc && npm run copy-assets"
+	},
+	"private": true,
+	"peerDependencies": {
+		"@expo/vector-icons": "^14.0.4"
+	},
+	"devDependencies": {
+		"@expo/vector-icons": "^14.0.4",
+		"@types/fs-extra": "^11.0.4",
+		"fs-extra": "^11.2.0",
+		"node-fetch": "^3.3.2",
+		"ts-node": "^10.4.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"material-symbols": "^0.27.1"
+	}
+}
