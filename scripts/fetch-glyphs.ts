@@ -15,7 +15,7 @@ const glyphs = data.icons.map((icon) => {
 });
 
 const glyphMap = glyphs.reduce(
-	(acc, glyph, index) => {
+	(acc, glyph) => {
 		acc[glyph] = glyph;
 		return acc;
 	},
