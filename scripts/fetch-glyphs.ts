@@ -22,7 +22,7 @@ const glyphMap = glyphs.reduce(
 
 const glyphMapFilled = glyphs.reduce(
 	(acc, glyph, index) => {
-		acc[glyph] = glyph + ".fill";
+		acc[glyph] = glyph + "_filled";
 		return acc;
 	},
 	{} as Record<string, string>,

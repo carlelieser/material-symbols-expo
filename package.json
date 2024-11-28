@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Material Symbols icon set for Expo.",
 	"main": "dist/index.js",
 	"scripts": {
@@ -9,7 +9,8 @@
 		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
 		"format": "prettier \"**/*.ts\" --write",
-		"build": "tsc && npm run copy-assets"
+		"build": "tsc && npm run copy-assets",
+		"update": "npm run fetch:glyphs && npm run fetch:fonts && npm run build"
 	},
 	"private": false,
 	"peerDependencies": {
