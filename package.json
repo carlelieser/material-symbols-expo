@@ -1,9 +1,9 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"description": "Material Symbols icon set for Expo.",
-	"main": "dist/index.js",
+	"main": "dist/src/index.js",
 	"scripts": {
 		"clean": "rimraf dist src/assets",
 		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
