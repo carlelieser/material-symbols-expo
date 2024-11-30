@@ -1,8 +1,8 @@
 import { glyphMap } from "./glyphMap";
 import createIconSet from "@expo/vector-icons/createIconSet";
-import { fonts } from "../scripts/common";
 import { Icon } from "@expo/vector-icons/build/createIconSet";
 
+const fonts = ["MaterialSymbolsOutlined", "MaterialSymbolsOutlinedFilled", "MaterialSymbolsRounded", "MaterialSymbolsRoundedFilled", "MaterialSymbolsSharp", "MaterialSymbolsSharpFilled"];
 const exports: Record<string, Icon<keyof typeof glyphMap, string>> = {};
 
 fonts.forEach((fontName) => {
