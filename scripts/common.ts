@@ -5,11 +5,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const rootDir = path.join(__dirname, "..");
-
 export const fontsDir = path.join(rootDir, "src", "assets", "fonts");
 
-export const fonts = {
-	"material-symbols-outlined": "MaterialSymbolsOutlined",
-	"material-symbols-rounded": "MaterialSymbolsRounded",
-	"material-symbols-sharp": "MaterialSymbolsSharp",
-};
+export const variants = ["Outlined", "Rounded", "Sharp"];
+export const fontNames = variants.map((variant) => "MaterialSymbols" + variant);
+export const filledFontNames = fontNames.map((fontName) => fontName + "Filled");
+export const fonts = [...fontNames, ...filledFontNames];

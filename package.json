@@ -1,17 +1,18 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "2.0.2",
+	"version": "3.0.2",
 	"description": "Material Symbols icon set for Expo.",
 	"main": "dist/index.js",
 	"scripts": {
+		"clean": "rimraf dist src/assets",
 		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
 		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
 		"create-fill-variants": "tsx ./scripts/create-fill-variants.ts",
 		"format": "prettier \"**/*.ts\" --write",
 		"build": "tsc && npm run copy-assets",
-		"update": "npm run fetch:glyphs && npm run fetch:fonts && npm run create-fill-variants && npm run build"
+		"update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-fill-variants && npm run build"
 	},
 	"private": false,
 	"peerDependencies": {
@@ -21,9 +22,11 @@
 		"@expo/vector-icons": "^14.0.4",
 		"@types/fs-extra": "^11.0.4",
 		"@web-alchemy/fonttools": "^1.2.0",
+		"fast-glob": "^3.3.2",
 		"fs-extra": "^11.2.0",
 		"node-fetch": "^3.3.2",
 		"prettier": "^3.4.1",
+		"rimraf": "^6.0.1",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.2"
 	}
