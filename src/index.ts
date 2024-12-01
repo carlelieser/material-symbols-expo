@@ -8,25 +8,30 @@ const fonts = [
 	"MaterialSymbolsRounded",
 	"MaterialSymbolsRoundedFilled",
 	"MaterialSymbolsSharp",
-	"MaterialSymbolsSharpFilled"
+	"MaterialSymbolsSharpFilled",
 ];
 
-const iconSets: Record<string, Icon<keyof typeof glyphMap, string>> = fonts.reduce((acc, fontName) => {
+const iconSets: Record<
+	string,
+	Icon<keyof typeof glyphMap, string>
+> = fonts.reduce((acc, fontName) => {
 	acc[fontName] = createIconSet(glyphMap, fontName, fontName + ".ttf");
 	return acc;
 }, {});
 
 const paths = fonts.map(
 	(fontName) =>
-		`node_modules/material-symbols-expo/dist/assets/fonts/${fontName}.ttf`
+		`node_modules/material-symbols-expo/dist/assets/fonts/${fontName}.ttf`,
 );
 
 export const MaterialSymbols = iconSets.MaterialSymbolsOutlined;
 export const MaterialSymbolsFilled = iconSets.MaterialSymbolsOutlinedFilled;
 export const MaterialSymbolsOutlined = iconSets.MaterialSymbolsOutlined;
-export const MaterialSymbolsOutlinedFilled = iconSets.MaterialSymbolsOutlinedFilled;
+export const MaterialSymbolsOutlinedFilled =
+	iconSets.MaterialSymbolsOutlinedFilled;
 export const MaterialSymbolsRounded = iconSets.MaterialSymbolsRounded;
-export const MaterialSymbolsRoundedFilled = iconSets.MaterialSymbolsRoundedFilled;
+export const MaterialSymbolsRoundedFilled =
+	iconSets.MaterialSymbolsRoundedFilled;
 export const MaterialSymbolsSharp = iconSets.MaterialSymbolsSharp;
 export const MaterialSymbolsSharpFilled = iconSets.MaterialSymbolsSharpFilled;
 export const MaterialSymbolsFonts = paths;

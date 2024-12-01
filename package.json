@@ -3,18 +3,25 @@
 	"type": "module",
 	"version": "3.1.8",
 	"description": "Material Symbols icon set for Expo.",
-	"main": "dist/index.js",
+	"exports": {
+		"require": "./cjs/index.js",
+		"import": "./esm/index.js"
+	},
+	"main": "cjs/index.js",
 	"files": [
-		"dist"
+		"cjs",
+		"esm"
 	],
 	"scripts": {
-		"clean": "rimraf dist src/assets",
+		"clean": "rimraf cjs esm src/assets",
 		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
 		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
 		"create-fill-variants": "tsx ./scripts/create-fill-variants.ts",
 		"format": "prettier \"**/*.ts\" --write",
-		"build": "tsc && npm run copy-assets",
+		"build:cjs": "tsc --module commonjs --outDir cjs/",
+		"build:esm": "tsc --module es2022 --outDir esm/",
+		"build": "npm run build:cjs && npm run build:esm && npm run copy-assets",
 		"update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-fill-variants && npm run build"
 	},
 	"private": false,
