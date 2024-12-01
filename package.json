@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "4.1.9",
+	"version": "4.1.10",
 	"description": "Material Symbols icon set for Expo.",
 	"exports": {
 		"require": "./cjs/index.js",
