@@ -15,7 +15,7 @@ const iconSets: Record<
 	string,
 	Icon<keyof typeof glyphMap, string>
 > = fonts.reduce((acc, fontName) => {
-	acc[fontName] = createIconSet(glyphMap, fontName, fontName + ".ttf");
+	acc[fontName] = createIconSet(glyphMap, fontName, fontName);
 	return acc;
 }, {});
 
