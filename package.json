@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "3.1.7",
+	"version": "3.1.8",
 	"description": "Material Symbols icon set for Expo.",
 	"main": "dist/index.js",
 	"files": [
