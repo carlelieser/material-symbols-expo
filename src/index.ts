@@ -35,3 +35,4 @@ export const MaterialSymbolsRoundedFilled =
 export const MaterialSymbolsSharp = iconSets.MaterialSymbolsSharp;
 export const MaterialSymbolsSharpFilled = iconSets.MaterialSymbolsSharpFilled;
 export const MaterialSymbolsFonts = paths;
+export const MaterialSymbolsGlyphMap = glyphMap;
