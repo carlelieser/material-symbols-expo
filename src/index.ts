@@ -17,3 +17,4 @@ export const MaterialSymbolsRounded = exports["MaterialSymbolsRounded"];
 export const MaterialSymbolsRoundedFilled = exports["MaterialSymbolsRoundedFilled"];
 export const MaterialSymbolsSharp = exports["MaterialSymbolsSharp"];
 export const MaterialSymbolsSharpFilled = exports["MaterialSymbolsSharpFilled"];
+export const MaterialSymbolsFonts = fonts.map((fontName) => "node_modules/material-symbols-expo/dist/assets/fonts/" + fontName + ".ttf");
