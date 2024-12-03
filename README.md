@@ -29,7 +29,7 @@ npm install material-symbols-expo
 
 ## Setup
 
-Depending on your project setup, you can load the font assets using `useFonts` or via `expo-font` in your `app.config`
+Depending on your project setup, you can load font assets with `useFonts` or `expo-font` in your `app.config`
 file.
 
 ### Using `useFonts`
@@ -50,7 +50,7 @@ Configure font assets in your `app.config.mjs`:
 
 ```typescript
 // app.config.mjs
-import { MaterialSymbolsFonts } from "material-symbols-expo";
+import { MaterialSymbolsFontPaths } from "material-symbols-expo";
 
 export default {
 	expo: {
@@ -58,28 +58,7 @@ export default {
 			[
 				"expo-font",
 				{
-					fonts: [...MaterialSymbolsFonts]
-				}
-			]
-		]
-	}
-};
-```
-
-You probably won't use all font variants. In that case, you can import specific variants:
-
-```typescript
-import { MaterialSymbolsOutlinedFont } from "material-symbols-expo";
-
-export default {
-	expo: {
-		plugins: [
-			[
-				"expo-font",
-				{
-					fonts: [
-						MaterialSymbolsOutlinedFont,
-					]
+					fonts: [...MaterialSymbolsFontPaths]
 				}
 			]
 		]
@@ -89,6 +68,47 @@ export default {
 
 > **Note**: Ensure your `app.config` uses the `.mjs` extension to support ES Modules. Importing `MaterialSymbolsFonts`
 > without it will result in an error.
+
+### Importing individual variants
+
+You're not required to load all font assets at once. You can import specific variants as needed to reduce bundle size.
+
+#### Using `useFonts`
+
+```typescript
+
+import { useFonts } from "expo-font";
+import { MaterialSymbolsOutlinedFontAsset, MaterialSymbolsOutlinedFilledFontAsset } from "material-symbols-expo";
+
+const [fontsLoaded] = useFonts({
+	...MaterialSymbolsOutlinedFontAsset,
+	...MaterialSymbolsOutlinedFilledFontAsset,
+	...OtherFonts // Include your other font assets here
+});
+```
+
+#### Using `expo-font`
+
+```typescript
+// app.config.mjs
+import { MaterialSymbolsOutlinedFontPath, MaterialSymbolsOutlinedFilledFontPath } from "material-symbols-expo";
+
+export default {
+	expo: {
+		plugins: [
+			[
+				"expo-font",
+				{
+					fonts: [
+						...MaterialSymbolsOutlinedFontPath,
+						...MaterialSymbolsOutlinedFilledFontPath
+					]
+				}
+			]
+		]
+	}
+};
+```
 
 ---
 
