@@ -8,12 +8,12 @@ const esmPath = path.join(rootDir, "esm");
 const emitPackageJson = (root: string, type: string) =>
 	fs.outputFile(
 		path.join(root, "package.json"),
-		JSON.stringify({ type }, null, 2)
+		JSON.stringify({ type }, null, 2),
 	);
 
 await Promise.all([
 	fs.copy(input, path.join(cjsPath, "assets")),
 	fs.copy(input, path.join(esmPath, "assets")),
 	emitPackageJson(cjsPath, "commonjs"),
-	emitPackageJson(esmPath, "module")
+	emitPackageJson(esmPath, "module"),
 ]);
