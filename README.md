@@ -19,7 +19,7 @@ import { useFonts } from "expo-font";
 import { MaterialSymbolsFonts } from "material-symbols-expo";
 
 const [fontsLoaded] = useFonts({
-    ...MaterialSymbolsFonts
+    ...MaterialSymbolsFonts,
     ...OtherFonts
 });
 ```
@@ -51,7 +51,7 @@ export default {
 
 The library provides a convenience component that lets you specify variants and fill without explicitly importing those components separately.
 
-```typescript
+```typescript jsx
 import { MaterialSymbols } from "material-symbols-expo";
 
 <MaterialSymbols
@@ -65,7 +65,7 @@ import { MaterialSymbols } from "material-symbols-expo";
 
 You can also import variants with or without fill directly:
 
-```typescript
+```typescript jsx
 import { MaterialSymbolsOutlined, MaterialSymbolsRoundedFilled } from "material-symbols-expo";
 
 <MaterialSymbolsOutlined {...props} />
