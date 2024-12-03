@@ -14,7 +14,7 @@ export const MaterialSymbols = (props: MaterialSymbolsProps) => {
 		const fill = filled ? "Filled" : "";
 		const key = `MaterialSymbols${style}${fill}`;
 		return MaterialSymbolsIconSet[key];
-	}, [variant]);
+	}, [variant, filled]);
 
 	return <IconSet {...rest} />;
 };
