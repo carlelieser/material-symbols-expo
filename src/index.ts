@@ -1,6 +1,7 @@
 import { glyphMap } from "./glyphMap";
 import createIconSet from "@expo/vector-icons/createIconSet";
 import { Icon } from "@expo/vector-icons/build/createIconSet";
+import { MaterialSymbols } from "./MaterialSymbols";
 
 export type MaterialSymbolsGlyphs = keyof typeof glyphMap;
 
@@ -39,3 +40,4 @@ export const MaterialSymbolsSharpFilled =
 	MaterialSymbolsIconSet.MaterialSymbolsSharpFilled;
 export const MaterialSymbolsFonts = paths;
 export const MaterialSymbolsGlyphMap = glyphMap;
+export { MaterialSymbols };
