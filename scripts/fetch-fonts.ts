@@ -7,7 +7,7 @@ const URL_PREFIX =
 const URL_SUFFIX = "%5BFILL,GRAD,opsz,wght%5D.ttf";
 
 const fetchFont = async (fontName: string) => {
-	const fileName = `${fontName}.ttf`;
+	const fileName = `${fontName}Variable.ttf`;
 	const url = `${URL_PREFIX}${fontName}${URL_SUFFIX}`;
 	const output = path.join(fontsDir, fileName);
 	const response = await fetch(url);

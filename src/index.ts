@@ -1,6 +1,5 @@
 import { glyphMap } from "./glyphMap";
 import createIconSet from "@expo/vector-icons/createIconSet";
-import { Icon } from "@expo/vector-icons/build/createIconSet";
 
 const fonts = [
 	"MaterialSymbolsOutlined",
@@ -11,13 +10,13 @@ const fonts = [
 	"MaterialSymbolsSharpFilled",
 ];
 
-const iconSets: Record<
-	string,
-	Icon<keyof typeof glyphMap, string>
-> = fonts.reduce((acc, fontName) => {
-	acc[fontName] = createIconSet(glyphMap, fontName, fontName);
-	return acc;
-}, {});
+const iconSets = fonts.reduce(
+	(acc, fontName) => {
+		acc[fontName] = createIconSet(glyphMap, fontName, fontName);
+		return acc;
+	},
+	{} as Record<string, any>,
+);
 
 const paths = fonts.map(
 	(fontName) =>

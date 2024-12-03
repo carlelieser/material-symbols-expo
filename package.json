@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "4.1.10",
+	"version": "5.1.10",
 	"description": "Material Symbols icon set for Expo.",
 	"exports": {
 		"require": "./cjs/index.js",
@@ -17,25 +17,28 @@
 		"fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
 		"fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
 		"copy-assets": "tsx ./scripts/copy-assets.ts",
-		"create-fill-variants": "tsx ./scripts/create-fill-variants.ts",
+		"create-variants": "tsx ./scripts/create-variants.ts",
 		"format": "prettier \"**/*.ts\" --write",
 		"build:cjs": "tsc --module commonjs --outDir cjs/",
 		"build:esm": "tsc --module es2022 --outDir esm/",
 		"build": "npm run build:cjs && npm run build:esm && npm run copy-assets",
-		"update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-fill-variants && npm run build"
+		"update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
 	},
 	"private": false,
 	"peerDependencies": {
-		"@expo/vector-icons": "^14.0.4"
+		"@expo/vector-icons": "^14.0.4",
+		"react": "^18.3.1"
 	},
 	"devDependencies": {
 		"@expo/vector-icons": "^14.0.4",
 		"@types/fs-extra": "^11.0.4",
+		"@types/react": "^18.3.12",
 		"@web-alchemy/fonttools": "^1.2.0",
 		"fast-glob": "^3.3.2",
 		"fs-extra": "^11.2.0",
 		"node-fetch": "^3.3.2",
 		"prettier": "^3.4.1",
+		"react": "^18.3.1",
 		"rimraf": "^6.0.1",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.2"
