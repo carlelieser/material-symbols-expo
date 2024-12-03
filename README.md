@@ -121,9 +121,9 @@ This library includes the following icon styles:
 - **Rounded**: `MaterialSymbolsRounded`
 - **Sharp**: `MaterialSymbolsSharp`
 - **Filled Variants**:
-    - Outlined + Fill: `MaterialSymbolsOutlinedFilled`
-    - Rounded + Fill: `MaterialSymbolsRoundedFilled`
-    - Sharp + Fill: `MaterialSymbolsSharpFilled`
+- Outlined + Fill: `MaterialSymbolsOutlinedFilled`
+- Rounded + Fill: `MaterialSymbolsRoundedFilled`
+- Sharp + Fill: `MaterialSymbolsSharpFilled`
 
 ---
 
