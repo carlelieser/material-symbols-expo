@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
+    "jsx": "react-native",
     "module": "ESNext",
     "moduleResolution": "node",
     "skipLibCheck": true,
