@@ -66,6 +66,27 @@ export default {
 };
 ```
 
+You probably won't use all font variants. In that case, you can import specific variants:
+
+```typescript
+import { MaterialSymbolsOutlinedFont } from "material-symbols-expo";
+
+export default {
+	expo: {
+		plugins: [
+			[
+				"expo-font",
+				{
+					fonts: [
+						MaterialSymbolsOutlinedFont,
+					]
+				}
+			]
+		]
+	}
+};
+```
+
 > **Note**: Ensure your `app.config` uses the `.mjs` extension to support ES Modules. Importing `MaterialSymbolsFonts`
 > without it will result in an error.
 
