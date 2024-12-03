@@ -100,8 +100,8 @@ export default {
 				"expo-font",
 				{
 					fonts: [
-						...MaterialSymbolsOutlinedFontPath,
-						...MaterialSymbolsOutlinedFilledFontPath
+						MaterialSymbolsOutlinedFontPath,
+						MaterialSymbolsOutlinedFilledFontPath
 					]
 				}
 			]
