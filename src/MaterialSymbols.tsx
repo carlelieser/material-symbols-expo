@@ -8,7 +8,7 @@ export interface MaterialSymbolsProps extends IconProps<MaterialSymbolsGlyphs> {
 }
 
 export const MaterialSymbols = (props: MaterialSymbolsProps) => {
-	const { variant = "outlined", filled = false, ...rest } = props;
+	const { variant = "outlined", filled = false, size = 24, ...rest } = props;
 	const IconSet = useMemo(() => {
 		const style = variant.charAt(0).toUpperCase() + variant.slice(1);
 		const fill = filled ? "Filled" : "";
@@ -16,5 +16,5 @@ export const MaterialSymbols = (props: MaterialSymbolsProps) => {
 		return MaterialSymbolsIconSet[key];
 	}, [variant, filled]);
 
-	return <IconSet {...rest} />;
+	return <IconSet size={size} {...rest} />;
 };
