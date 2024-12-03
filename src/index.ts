@@ -71,6 +71,25 @@ export const MaterialSymbolsSharpFont = fontAssets.MaterialSymbolsSharp;
 export const MaterialSymbolsSharpFilledFont =
 	fontAssets.MaterialSymbolsSharpFilled;
 
+export const MaterialSymbolsOutlinedFontAsset = {
+	MaterialSymbolsOutlined: fontAssets.MaterialSymbolsOutlined,
+};
+export const MaterialSymbolsOutlinedFilledFontAsset = {
+	MaterialSymbolsOutlinedFilled: fontAssets.MaterialSymbolsOutlinedFilled,
+};
+export const MaterialSymbolsRoundedFontAsset = {
+	MaterialSymbolsRounded: fontAssets.MaterialSymbolsRounded,
+};
+export const MaterialSymbolsRoundedFilledFontAsset = {
+	MaterialSymbolsRoundedFilled: fontAssets.MaterialSymbolsRoundedFilled,
+};
+export const MaterialSymbolsSharpFontAsset = {
+	MaterialSymbolsSharp: fontAssets.MaterialSymbolsSharp,
+};
+export const MaterialSymbolsSharpFilledFontAsset = {
+	MaterialSymbolsSharpFilled: fontAssets.MaterialSymbolsSharpFilled,
+};
+
 export const MaterialSymbolsOutlinedFontPath = pathsMap.MaterialSymbolsOutlined;
 export const MaterialSymbolsOutlinedFilledFontPath =
 	pathsMap.MaterialSymbolsOutlinedFilled;
