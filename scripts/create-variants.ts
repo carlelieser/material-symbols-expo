@@ -16,7 +16,7 @@ const createFillVariant = async (fontName: string, fill: number) => {
 	const output = path.join(fontsDir, `${fontName}${suffix}.ttf`);
 	const outputBuffer = await instantiateVariableFont(font, {
 		FILL: fill,
-		GRAD: 100,
+		GRAD: 0,
 		opsz: 24,
 		wght: 400,
 	});
