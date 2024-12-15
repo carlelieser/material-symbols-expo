@@ -15,14 +15,19 @@ const titleCaseWithSpaces = (str: string) =>
 const fontNameWithVariant = (fontName: string, fill: number) =>
 	fontName + (fill ? "Filled" : "");
 
-const changeFontNameRecord = async (
+const changeFontNameRecords = async (
 	fontPath: string,
 	oldFontName: string,
 	newFontName: string,
 ) => {
 	const ttxBuffer = await ttx(fontPath);
-	const ttxPath = path.join(path.dirname(fontPath), `${oldFontName}_TTX.ttx`);
+	const ttxPath = path.join(
+		path.dirname(fontPath),
+		`${newFontName}-pre-conversion.ttx`,
+	);
+
 	await fs.outputFile(ttxPath, ttxBuffer);
+
 	const xmlObj = xmlParser.toJson(ttxBuffer, {
 		reversible: true,
 		object: true,
@@ -33,7 +38,7 @@ const changeFontNameRecord = async (
 			const regularFontName = `${oldFontName}-Regular`;
 			record["$t"] = record["$t"].replace(regularFontName, newFontName);
 		}
-		if (record.nameID === "4") {
+		if (record.nameID === "1" || record.nameID === "4") {
 			record["$t"] = titleCaseWithSpaces(newFontName);
 		}
 	});
@@ -41,20 +46,15 @@ const changeFontNameRecord = async (
 	return xmlObj;
 };
 
-const ttxToTtf = async (
-	xmlObj: object,
-	outputDir: string,
-	fontName: string,
-) => {
-	const xml = JSON.stringify(xmlObj);
-	const parsedXml = xmlParser.toXml(xml);
-	const xmlWithHeader = `<?xml version="1.0" encoding="UTF-8"?>
-${parsedXml}`;
-	const xmlPath = path.join(outputDir, `${fontName}.ttx`);
-	const fontPath = path.join(outputDir, `${fontName}.ttf`);
-	await fs.outputFile(xmlPath, xmlWithHeader);
-	const outputBuffer = await ttx(xmlPath);
-	await fs.outputFile(fontPath, outputBuffer);
+const xmlToTtx = async (input: string, output: string) => {
+	const parsedXml = xmlParser.toXml(input);
+	const xmlWithHeader = `<?xml version="1.0" encoding="UTF-8"?>\n${parsedXml}`;
+	await fs.outputFile(output, xmlWithHeader);
+};
+
+const ttxToTtf = async (input: string, output: string) => {
+	const outputBuffer = await ttx(input);
+	await fs.outputFile(output, outputBuffer);
 };
 
 const changeFontName = async (
@@ -62,12 +62,19 @@ const changeFontName = async (
 	oldFontName: string,
 	newFontName: string,
 ) => {
-	const xmlObj = await changeFontNameRecord(
+	const ttxPath = path.join(fontsDir, `${newFontName}.ttx`);
+	const newFontPath = path.join(fontsDir, `${newFontName}.ttf`);
+
+	const data = await changeFontNameRecords(
 		fontPath,
 		oldFontName,
 		newFontName,
 	);
-	await ttxToTtf(xmlObj, path.dirname(fontPath), newFontName);
+
+	const xml = JSON.stringify(data);
+
+	await xmlToTtx(xml, ttxPath);
+	await ttxToTtf(ttxPath, newFontPath);
 };
 
 const createStaticFontFromVariableFont = async (
