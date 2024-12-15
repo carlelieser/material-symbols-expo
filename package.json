@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "5.2.19",
+	"version": "5.2.20",
 	"description": "Material Symbols icon set for Expo.",
 	"exports": {
 		"require": "./cjs/index.js",
@@ -33,6 +33,7 @@
 		"@expo/vector-icons": "^14.0.4",
 		"@types/fs-extra": "^11.0.4",
 		"@types/react": "^18.3.12",
+		"@types/xml2json": "^0.11.6",
 		"@web-alchemy/fonttools": "^1.2.0",
 		"fast-glob": "^3.3.2",
 		"fs-extra": "^11.2.0",
@@ -41,6 +42,7 @@
 		"react": "^18.3.1",
 		"rimraf": "^6.0.1",
 		"tsx": "^4.19.2",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.2",
+		"xml2json": "^0.12.0"
 	}
 }
