@@ -7,14 +7,6 @@ const __dirname = path.dirname(__filename);
 
 export default {
 	entry: "./src/index.ts",
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "index.js",
-		library: "MaterialSymbols",
-		libraryTarget: "umd",
-		globalObject: "this",
-		clean: true,
-	},
 	module: {
 		rules: [
 			{
