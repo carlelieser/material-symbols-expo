@@ -1,12 +1,12 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
 	output: {
+		assetModuleFilename: "../assets/[name][ext]",
 		clean: true,
 	},
 	entry: {
@@ -25,10 +25,8 @@ export default {
 				},
 			},
 			{
-				test: /\.ttf/,
-				use: {
-					loader: "ignore-loader",
-				},
+				test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,
+				type: "asset/resource",
 			},
 		],
 	},
@@ -42,14 +40,4 @@ export default {
 		"react-dom": "react-dom",
 		"react-native": "react-native",
 	},
-	plugins: [
-		new CopyWebpackPlugin({
-			patterns: [
-				{
-					from: path.resolve(__dirname, "src", "assets"),
-					to: path.resolve(__dirname, "dist", "assets"),
-				},
-			],
-		}),
-	],
 };
