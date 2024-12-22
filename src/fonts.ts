@@ -34,6 +34,9 @@ export const MaterialSymbolsRoundedFilledFontAsset = {
 export const MaterialSymbolsSharpFontAsset = {
 	MaterialSymbolsSharp: MaterialSymbolsSharpFont,
 };
+
 export const MaterialSymbolsSharpFilledFontAsset = {
 	MaterialSymbolsSharpFilled: MaterialSymbolsSharpFilledFont,
 };
+
+export const MaterialSymbolsFonts = fontAssets;
