@@ -1,6 +1,6 @@
 import { IconProps } from "@expo/vector-icons/build/createIconSet";
 import { MaterialSymbolsGlyphs, MaterialSymbolsIconSet } from "./index";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 
 export interface MaterialSymbolsProps extends IconProps<MaterialSymbolsGlyphs> {
 	variant?: "outlined" | "rounded" | "sharp";

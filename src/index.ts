@@ -38,7 +38,7 @@ const paths = fonts.map(
 
 const pathsMap = paths.reduce(
 	(acc, path, i) => {
-		const fontName = fonts[i];
+		const fontName = fonts[i] as keyof typeof fontAssets;
 		acc[fontName] = path;
 		return acc;
 	},
