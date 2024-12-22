@@ -1,13 +1,20 @@
-import { paths, pathsMap } from "./common";
+import { paths, pathMap } from "./common";
 
-export const MaterialSymbolsOutlinedFontPath = pathsMap.MaterialSymbolsOutlined;
+export const MaterialSymbolsOutlinedFontPath = pathMap.MaterialSymbolsOutlined;
+
 export const MaterialSymbolsOutlinedFilledFontPath =
-	pathsMap.MaterialSymbolsOutlinedFilled;
-export const MaterialSymbolsRoundedFontPath = pathsMap.MaterialSymbolsRounded;
-export const MaterialSymbolsRoundedFilledFontPath =
-	pathsMap.MaterialSymbolsRoundedFilled;
-export const MaterialSymbolsSharpFontPath = pathsMap.MaterialSymbolsSharp;
-export const MaterialSymbolsSharpFilledFontPath =
-	pathsMap.MaterialSymbolsSharpFilled;
+	pathMap.MaterialSymbolsOutlinedFilled;
 
-export default paths;
+export const MaterialSymbolsRoundedFontPath = pathMap.MaterialSymbolsRounded;
+
+export const MaterialSymbolsRoundedFilledFontPath =
+	pathMap.MaterialSymbolsRoundedFilled;
+
+export const MaterialSymbolsSharpFontPath = pathMap.MaterialSymbolsSharp;
+
+export const MaterialSymbolsSharpFilledFontPath =
+	pathMap.MaterialSymbolsSharpFilled;
+
+export const MaterialSymbolsFontPaths = paths;
+
+export const MaterialSymbolsFontPathMap = pathMap;
