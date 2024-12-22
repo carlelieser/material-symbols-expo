@@ -1,49 +1,9 @@
 import { glyphMap } from "./glyphMap";
-import createIconSet from "@expo/vector-icons/createIconSet";
-import { Icon } from "@expo/vector-icons/build/createIconSet";
 import { MaterialSymbols } from "./MaterialSymbols";
+import { fontAssets, paths, pathsMap } from "./common";
+import MaterialSymbolsIconSet from "./MaterialSymbolsIconSet";
 
 export type MaterialSymbolsGlyphs = keyof typeof glyphMap;
-
-const fonts = [
-	"MaterialSymbolsOutlined",
-	"MaterialSymbolsOutlinedFilled",
-	"MaterialSymbolsRounded",
-	"MaterialSymbolsRoundedFilled",
-	"MaterialSymbolsSharp",
-	"MaterialSymbolsSharpFilled",
-];
-
-const fontAssets = {
-	MaterialSymbolsOutlined: require("./assets/fonts/MaterialSymbolsOutlined.ttf"),
-	MaterialSymbolsOutlinedFilled: require("./assets/fonts/MaterialSymbolsOutlinedFilled.ttf"),
-	MaterialSymbolsRounded: require("./assets/fonts/MaterialSymbolsRounded.ttf"),
-	MaterialSymbolsRoundedFilled: require("./assets/fonts/MaterialSymbolsRoundedFilled.ttf"),
-	MaterialSymbolsSharp: require("./assets/fonts/MaterialSymbolsSharp.ttf"),
-	MaterialSymbolsSharpFilled: require("./assets/fonts/MaterialSymbolsSharpFilled.ttf"),
-};
-
-export const MaterialSymbolsIconSet = fonts.reduce(
-	(acc, fontName) => {
-		acc[fontName] = createIconSet(glyphMap, fontName, fontName);
-		return acc;
-	},
-	{} as Record<string, Icon<MaterialSymbolsGlyphs, string>>,
-);
-
-const paths = fonts.map(
-	(fontName) =>
-		`node_modules/material-symbols-expo/dist/assets/fonts/${fontName}.ttf`,
-);
-
-const pathsMap = paths.reduce(
-	(acc, path, i) => {
-		const fontName = fonts[i] as keyof typeof fontAssets;
-		acc[fontName] = path;
-		return acc;
-	},
-	{} as Record<keyof typeof fontAssets, string>,
-);
 
 export const MaterialSymbolsOutlined =
 	MaterialSymbolsIconSet.MaterialSymbolsOutlined;
@@ -100,4 +60,4 @@ export const MaterialSymbolsSharpFontPath = pathsMap.MaterialSymbolsSharp;
 export const MaterialSymbolsSharpFilledFontPath =
 	pathsMap.MaterialSymbolsSharpFilled;
 
-export { MaterialSymbols };
+export { MaterialSymbols, MaterialSymbolsIconSet };
