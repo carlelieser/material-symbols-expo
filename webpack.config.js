@@ -1,6 +1,7 @@
 import path from "path";
-import { fileURLToPath } from 'url';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+import { fileURLToPath } from "url";
+import CopyWebpackPlugin from "copy-webpack-plugin";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,9 +26,9 @@ export default {
 			{
 				test: /\.ttf/,
 				use: {
-					loader: "ignore-loader"
-				}
-			}
+					loader: "ignore-loader",
+				},
+			},
 		],
 	},
 	resolve: {
@@ -39,8 +40,8 @@ export default {
 		new CopyWebpackPlugin({
 			patterns: [
 				{
-					from: path.resolve(__dirname, 'src/assets'),
-					to: path.resolve(__dirname, 'dist/assets'),
+					from: path.resolve(__dirname, "src/assets"),
+					to: path.resolve(__dirname, "dist/assets"),
 				},
 			],
 		}),
