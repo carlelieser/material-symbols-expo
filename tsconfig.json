@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./types",
     "emitDeclarationOnly": true,
     "skipLibCheck": true,
     "strict": true,
