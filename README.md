@@ -36,7 +36,7 @@ file.
 
 ```typescript
 import { useFonts } from "expo-font";
-import { MaterialSymbolsFonts } from "material-symbols-expo";
+import { MaterialSymbolsFonts } from "material-symbols-expo/fonts";
 
 const [fontsLoaded] = useFonts({
 	...MaterialSymbolsFonts,
@@ -46,69 +46,30 @@ const [fontsLoaded] = useFonts({
 
 ### Using `expo-font`
 
-Configure font assets in your `app.config.mjs`:
+Configure font assets in `app.config.js` or `app.config.ts`:
 
 ```typescript
-// app.config.mjs
-import { MaterialSymbolsFontPaths } from "material-symbols-expo";
+import "ts-node/register"; // not required in app.config.js
+import { MaterialSymbolsFontPaths } from "material-symbols-expo/paths";
 
 export default {
-	expo: {
-		plugins: [
-			[
-				"expo-font",
-				{
-					fonts: [...MaterialSymbolsFontPaths]
-				}
-			]
+	plugins: [
+		[
+			"expo-font",
+			{
+				fonts: [...MaterialSymbolsFontPaths]
+			}
 		]
-	}
+	]
 };
 ```
+> **Note**: You must import "ts-node/register" at the top of your `app.config.ts` file or Expo will fail to build. Alternatively, you can specify the font assets in your config directly by passing in the full path, i.e. "./node_modules/material-symbols-expo/dist/cjs/assets/fonts/MaterialSymbolsOutlined.ttf"
 
-> **Note**: Ensure your `app.config` uses the `.mjs` extension to support ES Modules. Importing `MaterialSymbolsFonts`
-> without it will result in an error.
+> **Note**: Refer to the `example` folder for a more informative usage of `app.config.js` and `app.config.ts`.
 
 ### Importing individual variants
 
-You're not required to load all font assets at once. You can import specific variants as needed to reduce bundle size.
-
-#### Using `useFonts`
-
-```typescript
-
-import { useFonts } from "expo-font";
-import { MaterialSymbolsOutlinedFontAsset, MaterialSymbolsOutlinedFilledFontAsset } from "material-symbols-expo";
-
-const [fontsLoaded] = useFonts({
-	...MaterialSymbolsOutlinedFontAsset,
-	...MaterialSymbolsOutlinedFilledFontAsset,
-	...OtherFonts // Include your other font assets here
-});
-```
-
-#### Using `expo-font`
-
-```typescript
-// app.config.mjs
-import { MaterialSymbolsOutlinedFontPath, MaterialSymbolsOutlinedFilledFontPath } from "material-symbols-expo";
-
-export default {
-	expo: {
-		plugins: [
-			[
-				"expo-font",
-				{
-					fonts: [
-						MaterialSymbolsOutlinedFontPath,
-						MaterialSymbolsOutlinedFilledFontPath
-					]
-				}
-			]
-		]
-	}
-};
-```
+You're not required to load all font assets at once. You can import specific variants from `material-symbols-expo/fonts` (to use with `useFonts`) or `material-symbols-expo/paths` (to use with `expo-font` config). 
 
 ---
 
