@@ -1,7 +1,7 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.27",
+  "version": "5.2.28",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/index.js",
   "files": [
@@ -19,7 +19,7 @@
     "update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
   },
   "exports": {
-    ".": {
+    "default": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
