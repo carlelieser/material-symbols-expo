@@ -21,8 +21,7 @@ export const paths = fonts.map(
 		`node_modules/material-symbols-expo/dist/assets/fonts/${fontName}.ttf`,
 );
 
-export const pathsMap = paths.reduce(
-	(acc, path, i) => {
+export const pathMap = paths.reduce((acc, path, i) => {
 		const fontName = fonts[i] as keyof typeof fontAssets;
 		acc[fontName] = path;
 		return acc;
