@@ -1,7 +1,7 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.32",
+  "version": "5.2.33",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "typings": "./types",
@@ -10,15 +10,15 @@
     "types"
   ],
   "scripts": {
-    "clean": "rimraf dist types",
-    "clean:all": "rimraf dist types src/assets",
+    "clean": "rimraf dist",
+    "clean:all": "rimraf dist src/assets",
     "fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
     "fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
     "create-variants": "tsx ./scripts/create-variants.ts",
     "format": "prettier \"**/*.{ts,tsx,js,jsx}\" --write",
-    "build:cjs": "webpack --config webpack.cjs.config.js",
-    "build:esm": "webpack --config webpack.esm.config.js",
-    "build": "npm run clean && npm run build:cjs && npm run build:esm && tsc",
+    "build:cjs": "webpack --config webpack.cjs.config.js && tsc --outDir dist/cjs",
+    "build:esm": "webpack --config webpack.esm.config.js && tsc --outDir dist/esm",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "update": "npm run clean:all && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
   },
   "exports": {
