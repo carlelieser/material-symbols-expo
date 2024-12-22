@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 export default merge(common, {
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "index.cjs",
+		filename: "[name].cjs",
 		libraryTarget: "commonjs2",
 	},
 });

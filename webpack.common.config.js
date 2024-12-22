@@ -6,7 +6,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-	entry: "./src/index.ts",
+	entry: {
+		index: "./src/index.ts",
+		MaterialSymbols: "./src/MaterialSymbols.tsx",
+		MaterialSymbolsFontPaths: "./src/MaterialSymbolsFontPaths.ts",
+		MaterialSymbolsIconSet: "./src/MaterialSymbolsIconSet.ts",
+	},
 	module: {
 		rules: [
 			{
