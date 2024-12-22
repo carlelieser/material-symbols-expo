@@ -42,4 +42,14 @@ export default {
 		"react-dom": "react-dom",
 		"react-native": "react-native",
 	},
+	plugins: [
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, "src", "assets"),
+					to: path.resolve(__dirname, "dist", "assets"),
+				},
+			],
+		}),
+	],
 };
