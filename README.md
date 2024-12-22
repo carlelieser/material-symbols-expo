@@ -63,7 +63,7 @@ export default {
 	]
 };
 ```
-> **Note**: You must import "ts-node/register" at the top of your `app.config.ts` file or Expo will fail to build. Alternatively, you can specify the font assets in your config directly by passing in the full path, i.e. "./node_modules/material-symbols-expo/dist/cjs/assets/fonts/MaterialSymbolsOutlined.ttf"
+> **Note**: You must import "ts-node/register" at the top of your `app.config.ts` file or Expo will fail to build. Alternatively, you can specify the font assets in your config directly by passing in the full path, i.e. "./node_modules/material-symbols-expo/dist/assets/MaterialSymbolsOutlined.ttf"
 
 > **Note**: Refer to the `example` folder for a more informative usage of `app.config.js` and `app.config.ts`.
 
