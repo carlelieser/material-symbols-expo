@@ -8,9 +8,9 @@ const __dirname = path.dirname(__filename);
 export default {
 	entry: {
 		index: "./src/index.ts",
-		MaterialSymbols: "./src/MaterialSymbols.tsx",
-		MaterialSymbolsFontPaths: "./src/MaterialSymbolsFontPaths.ts",
-		MaterialSymbolsIconSet: "./src/MaterialSymbolsIconSet.ts",
+		icon: "./src/MaterialSymbols.tsx",
+		paths: "./src/paths.ts",
+		"icon-set": "./src/icon-set.ts",
 	},
 	module: {
 		rules: [

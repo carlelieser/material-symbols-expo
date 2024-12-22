@@ -1,7 +1,7 @@
 import { glyphMap } from "./glyphMap";
 import { MaterialSymbols } from "./MaterialSymbols";
 import { fontAssets, paths, pathsMap } from "./common";
-import MaterialSymbolsIconSet from "./MaterialSymbolsIconSet";
+import MaterialSymbolsIconSet from "./icon-set";
 
 export type MaterialSymbolsGlyphs = keyof typeof glyphMap;
 

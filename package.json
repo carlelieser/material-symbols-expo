@@ -1,14 +1,14 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.26",
+  "version": "5.2.27",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf dist src/assets",
+    "clean": "rimraf dist",
     "fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
     "fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
     "create-variants": "tsx ./scripts/create-variants.ts",
@@ -22,6 +22,18 @@
     ".": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
+    },
+    "paths": {
+      "require": "./dist/paths.cjs",
+      "import": "./dist/paths.js"
+    },
+    "icon-set": {
+      "require": "./dist/icon-set.cjs",
+      "import": "./dist/icon-set.js"
+    },
+    "icon": {
+      "require": "./dist/icon.cjs",
+      "import": "./dist/icon.js"
     }
   },
   "private": false,
