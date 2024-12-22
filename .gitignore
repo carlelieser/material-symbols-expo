@@ -4,5 +4,4 @@ node_modules
 src/assets
 src/glyphMap.ts
 
-cjs
-esm
+package-lock.json
