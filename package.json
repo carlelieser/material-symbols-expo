@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf cjs esm src/assets",
+    "clean": "rimraf dist src/assets",
     "fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
     "fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
     "create-variants": "tsx ./scripts/create-variants.ts",
