@@ -18,7 +18,7 @@ export const fontAssets = {
 
 export const paths = fonts.map(
 	(fontName) =>
-		`node_modules/material-symbols-expo/dist/assets/fonts/${fontName}.ttf`,
+		`node_modules/material-symbols-expo/dist/assets/${fontName}.ttf`,
 );
 
 export const pathMap = paths.reduce((acc, path, i) => {
