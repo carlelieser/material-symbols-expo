@@ -1,5 +1,5 @@
 import * as fs from "node:fs";
-import { FontMetadata } from "../types";
+import { FontMetadata } from "./types";
 import * as path from "node:path";
 import { rootDir } from "./common";
 

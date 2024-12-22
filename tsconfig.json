@@ -1,20 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "esModuleInterop": true,
-    "jsx": "react-native",
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "declarationDir": "./types",
+    "emitDeclarationOnly": true,
     "skipLibCheck": true,
-    "target": "ESNext"
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "src/**/*",
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "scripts"]
 }

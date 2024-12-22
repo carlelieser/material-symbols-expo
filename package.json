@@ -11,10 +11,9 @@
     "clean": "rimraf cjs esm src/assets",
     "fetch:glyphs": "tsx ./scripts/fetch-glyphs.ts",
     "fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
-    "copy-assets": "tsx ./scripts/copy-assets.ts",
     "create-variants": "tsx ./scripts/create-variants.ts",
     "format": "prettier \"**/*.ts\" --write",
-    "build": "webpack",
+    "build": "webpack && tsc",
     "update": "npm run clean && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
   },
   "private": false,
