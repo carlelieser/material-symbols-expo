@@ -6,11 +6,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
+	output: {
+		clean: true,
+	},
 	entry: {
+		components: "./src/components.tsx",
+		fonts: "./src/fonts.ts",
+		glyphs: "./src/glyphs.ts",
 		index: "./src/index.ts",
-		icon: "./src/MaterialSymbols.tsx",
 		paths: "./src/paths.ts",
-		"icon-set": "./src/icon-set.ts",
 	},
 	module: {
 		rules: [
@@ -33,16 +37,6 @@ export default {
 	},
 	mode: "production",
 	devtool: "source-map",
-	plugins: [
-		new CopyWebpackPlugin({
-			patterns: [
-				{
-					from: path.resolve(__dirname, "src/assets"),
-					to: path.resolve(__dirname, "dist/assets"),
-				},
-			],
-		}),
-	],
 	externals: {
 		react: "react",
 		"react-dom": "react-dom",

@@ -9,7 +9,7 @@
     "module": "ESNext",
     "jsx": "react",
     "moduleResolution": "Node",
-    "outDir": "./dist",
+    "outDir": "types",
     "rootDir": "./src"
   },
   "include": ["src"],
