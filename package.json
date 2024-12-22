@@ -1,7 +1,7 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.34",
+  "version": "5.2.35",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "files": [
@@ -61,11 +61,9 @@
     "@types/xml2json": "^0.11.6",
     "@web-alchemy/fonttools": "^1.2.0",
     "babel-loader": "^9.2.1",
-    "copy-webpack-plugin": "^12.0.2",
     "expo-font": "^13.0.2",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "ignore-loader": "^0.1.2",
     "node-fetch": "^3.3.2",
     "prettier": "^3.4.1",
     "react": "^18.3.1",
