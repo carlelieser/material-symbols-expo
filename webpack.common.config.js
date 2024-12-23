@@ -1,3 +1,5 @@
+import TerserPlugin from "terser-webpack-plugin";
+
 export default {
 	output: {
 		assetModuleFilename: "../assets/[name][ext]",
@@ -34,5 +36,12 @@ export default {
 		react: "react",
 		"react-dom": "react-dom",
 		"react-native": "react-native",
+	},
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				extractComments: false,
+			}),
+		],
 	},
 };
