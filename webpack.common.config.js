@@ -29,7 +29,7 @@ export default {
 		extensions: [".tsx", ".ts", ".js", ".jsx"],
 	},
 	mode: "production",
-	devtool: "source-map",
+	devtool: false,
 	externals: {
 		react: "react",
 		"react-dom": "react-dom",
