@@ -57,19 +57,20 @@ export default {
 		[
 			"expo-font",
 			{
-				fonts: [...MaterialSymbolsFontPaths]
-			}
-		]
-	]
+				fonts: [...MaterialSymbolsFontPaths],
+			},
+		],
+	],
 };
 ```
+
 > **Note**: You must import "ts-node/register" at the top of your `app.config.ts` file or Expo will fail to build. Alternatively, you can specify the font assets in your config directly by passing in the full path, i.e. "./node_modules/material-symbols-expo/dist/assets/MaterialSymbolsOutlined.ttf"
 
 > **Note**: Refer to the `example` folder for a more informative usage of `app.config.js` and `app.config.ts`.
 
 ### Importing individual variants
 
-You're not required to load all font assets at once. You can import specific variants from `material-symbols-expo/fonts` (to use with `useFonts`) or `material-symbols-expo/paths` (to use with `expo-font` config). 
+You're not required to load all font assets at once. You can import specific variants from `material-symbols-expo/fonts` (to use with `useFonts`) or `material-symbols-expo/paths` (to use with `expo-font` config).
 
 ---
 
@@ -84,11 +85,11 @@ import { MaterialSymbols } from "material-symbols-expo";
 
 <MaterialSymbols
 	name="account_circle" // Required
-	variant="rounded"     // Optional: outlined (default), rounded, sharp
-	size={24}             // Optional: Default is 24
-	color="#000"          // Optional: Default is "currentColor"
-	filled={true}         // Optional: Default is false
-/>
+	variant="rounded" // Optional: outlined (default), rounded, sharp
+	size={24} // Optional: Default is 24
+	color="#000" // Optional: Default is "currentColor"
+	filled={true} // Optional: Default is false
+/>;
 ```
 
 ### 2. Direct Variant Imports

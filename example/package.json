@@ -1,15 +1,15 @@
 {
-  "type": "module",
-  "dependencies": {
-    "expo": "~52.0.11",
-    "expo-status-bar": "~2.0.0",
-    "material-symbols-expo": "^5.2.30",
-    "react": "18.3.1",
-    "react-native": "0.76.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@types/react": "~18.3.12",
-    "typescript": "^5.3.3"
-  }
+	"type": "module",
+	"dependencies": {
+		"expo": "~52.0.11",
+		"expo-status-bar": "~2.0.0",
+		"material-symbols-expo": "^5.2.30",
+		"react": "18.3.1",
+		"react-native": "0.76.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.25.2",
+		"@types/react": "~18.3.12",
+		"typescript": "^5.3.3"
+	}
 }

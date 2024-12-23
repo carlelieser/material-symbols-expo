@@ -1,0 +1,9 @@
+*
+
+!*.ts
+!*.d.ts
+
+!*/
+
+dist
+example
