@@ -2,5 +2,6 @@
   "useTabs": true,
   "singleQuote": false,
   "tabWidth": 4,
-  "semi": true
+  "semi": true,
+  "parser": "typescript"
 }
