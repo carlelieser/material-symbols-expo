@@ -1,12 +1,13 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.39",
+  "version": "5.2.40",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "clean": "rimraf dist types",
