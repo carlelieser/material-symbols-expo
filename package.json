@@ -1,7 +1,7 @@
 {
 	"name": "material-symbols-expo",
 	"type": "module",
-	"version": "5.2.41",
+	"version": "5.2.42",
 	"description": "Material Symbols icon set for Expo.",
 	"main": "dist/esm/index.js",
 	"license": "MIT",
@@ -47,8 +47,7 @@
 			"types": "./types/components.d.ts",
 			"require": "./dist/cjs/components.cjs",
 			"import": "./dist/esm/components.js"
-		},
-		"./assets": "./dist/assets"
+		}
 	},
 	"private": false,
 	"peerDependencies": {
