@@ -4,6 +4,7 @@
   "version": "5.2.38",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
+  "license": "MIT",
   "files": [
     "dist"
   ],
