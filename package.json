@@ -1,7 +1,7 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.48",
+  "version": "5.2.49",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "license": "MIT",
@@ -22,6 +22,10 @@
     "update": "npm run clean:all && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
   },
   "exports": {
+    ".": {
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.js"
+    },
     "./*": {
       "require": "./dist/cjs/*.cjs",
       "import": "./dist/esm/*.js"
