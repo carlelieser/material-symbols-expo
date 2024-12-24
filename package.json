@@ -5,6 +5,7 @@
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "license": "MIT",
+  "types": "dist/esm/index.d.ts",
   "files": [
     "dist",
     "types"
