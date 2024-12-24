@@ -1,7 +1,7 @@
 {
   "name": "material-symbols-expo",
   "type": "module",
-  "version": "5.2.49",
+  "version": "5.2.50",
   "description": "Material Symbols icon set for Expo.",
   "main": "dist/esm/index.js",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "fetch:fonts": "tsx ./scripts/fetch-fonts.ts",
     "create-variants": "tsx ./scripts/create-variants.ts",
     "format": "prettier --write .",
-    "build:cjs": "webpack --config webpack.cjs.config.js && tsc --outDir dist/cjs",
+    "build:cjs": "webpack --config webpack.cjs.config.js",
     "build:esm": "webpack --config webpack.esm.config.js && tsc --outDir dist/esm",
     "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "update": "npm run clean:all && npm run fetch:glyphs && npm run fetch:fonts && npm run create-variants && npm run build"
